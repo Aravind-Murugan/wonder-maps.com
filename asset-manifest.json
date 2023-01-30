@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/wonder-maps.com/static/js/main.1056f412.js",
+    "main.js": "/wonder-maps.com/static/js/main.1ebd862e.js",
     "static/media/logo.png": "/wonder-maps.com/static/media/logo.a3d0f61188c8628a0afb.png",
     "index.html": "/wonder-maps.com/index.html",
-    "main.1056f412.js.map": "/wonder-maps.com/static/js/main.1056f412.js.map"
+    "main.1ebd862e.js.map": "/wonder-maps.com/static/js/main.1ebd862e.js.map"
   },
   "entrypoints": [
-    "static/js/main.1056f412.js"
+    "static/js/main.1ebd862e.js"
   ]
 }
