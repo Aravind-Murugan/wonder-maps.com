@@ -3,9 +3,24 @@
 /* eslint-disable-next-line */
 
 // import libraries
-import { createGlobalStyle } from 'styled-components'
+import { styled, createGlobalStyle } from 'styled-components'
+import theme from 'styled-theming'
+
+export const backgroundColor = theme('theme', {
+  light: '#fff',
+  dark: '#2d2d2d',
+});
+
+export const textColor = theme('theme', {
+  light: '#000',
+  dark: '#fff',
+});
 
 export const GlobalStyle = createGlobalStyle`
+  :root {
+    --BackgroundColor: ${backgroundColor};
+    --TextColor: ${textColor};
+  }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
@@ -16,8 +31,9 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--BackgroundColor);
+    color: var(--TextColor);
+    transition: all 0.25s ease;
   }
   .App-PerLoader {
     min-height: 100vh;
@@ -25,5 +41,8 @@ export const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  #HomePage-Section {
+    display: flex;
   }
 `;
